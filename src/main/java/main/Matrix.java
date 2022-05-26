@@ -70,7 +70,7 @@ public class Matrix {
         return ij;
     }
 
-    public int detDegree(){//РАБОТАЕТ СО СТЕПЕНЯМИ
+    public int detDegree(){
         int det = 125;
         if((this.matrix.size() == 1) && (matrix.get(0).size() == 1))
             return this.matrix.get(0).get(0);
@@ -120,7 +120,6 @@ public class Matrix {
                     result.setElement(i, j, 125);
                     continue;
                 }
-                //result.setElement(i, j, alpha.indexOf(alpha.get(other).multiply(new Polynomial(List.of((int) Math.pow(-1, i+j))),5)));
                 result.setElement(j, i, alpha.indexOf(alpha.get(other).multiply(new Polynomial(List.of((int) Math.pow(-1, i+j))),5)));
             }
         }
